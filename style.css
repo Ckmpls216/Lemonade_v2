@@ -1,0 +1,85 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7d9aa; /* Light, lemonade-inspired background */
+    background-image: url('img/day_env.png'); /* Adjust the path as necessary */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Shared Section Styling */
+#welcomeScreen, #groceryList, #dateAndTimeSelection, #gameStatus {
+    background-color: rgba(255, 253, 208, 0.9); /* Semi-transparent to see the background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px; /* Adjusted for potentially wider content */
+    margin: 20px 0; /* Ensure some spacing around sections */
+    backdrop-filter: blur(4px); /* Soften the background image for better readability */
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #e9ac47;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+    background-color: #ffca28;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffb300;
+}
+
+/* Form Inputs */
+label, input, p {
+    margin: 10px 0;
+    display: block;
+}
+
+input[type="number"], input[type="date"], input[type="time"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px); /* Adjusted padding for consistency */
+}
+
+/* Day Counter and Game Status Styling */
+#gameStatus p, #gameStatus label {
+    color: #333; /* Ensures readability against the lighter background */
+    font-size: 16px; /* Slightly larger text for important game status information */
+}
+
+#currentDay, #lemonadePrice, #lemonsRecipe, #sugarRecipe, #iceRecipe {
+    position: relative; /* Adjusted for element positioning within #gameStatus */
+    margin: 5px 0; /* Slightly tighter spacing */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block; /* For inline positioning, if desired */
+}

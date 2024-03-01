@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemonade Stand Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Welcome Screen: The first interaction point for players, with a button to start the game -->
+    <div id="welcomeScreen">
+        <h1>Lemonade Stand</h1>
+        <button id="startGame">Start Game</button>
+    </div>
+
+    <!-- Grocery List: Where players select and buy ingredients for their lemonade stand -->
+    <div id="groceryList" style="display: none;">
+        <h2>Grocery List</h2>
+        <p>Piggy Bank: $<span id="piggyBank">100</span></p>
+        <form id="groceryForm">
+            <label for="lemons">Lemons ($0.50 each):</label>
+            <input type="number" id="lemons" min="0" value="0"><br>
+            <label for="cups">Cups ($0.25 each):</label>
+            <input type="number" id="cups" min="0" value="0"><br>
+            <label for="sugar">Sugar ($0.30 each):</label>
+            <input type="number" id="sugar" min="0" value="0"><br>
+            <label for="ice">Ice ($0.10 each):</label>
+            <input type="number" id="ice" min="0" value="0"><br>
+            <p>Total Cost: $<span id="totalCost">0</span></p>
+            <button type="button" id="buyItems">Buy Items</button>
+        </form>
+    </div>
+
+    <!-- Date and Time Selection, Price Setting, and Recipe Specification -->
+    <div id="dateAndTimeSelection" style="display: none;">
+        <h2>Choose Your Starting Date and Time</h2>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate"><br>
+        <label for="startTime">Start Time:</label>
+        <input type="time" id="startTime" name="startTime" min="06:00" max="18:00"><br>
+        
+        <!-- Added: Setting the price for lemonade -->
+        <label for="lemonadePrice">Price per Cup ($):</label>
+        <input type="number" id="lemonadePrice" name="lemonadePrice" step="0.01" min="0.01" value="1.00"><br>
+        
+        <h3>Lemonade Recipe</h3>
+        <label for="lemonsRecipe">Lemons per Pitcher:</label>
+        <input type="number" id="lemonsRecipe" name="lemonsRecipe" min="1" value="4"><br>
+        <label for="sugarRecipe">Cups of Sugar per Pitcher:</label>
+        <input type="number" id="sugarRecipe" name="sugarRecipe" min="0" value="2"><br>
+        <label for="iceRecipe">Cubes of Ice per Cup:</label>
+        <input type="number" id="iceRecipe" name="iceRecipe" min="0" value="4"><br>
+
+        <button type="button" id="confirmDateTime">Confirm Date and Time</button>
+    </div>
+
+    <!-- Game Status: Displays the current status, including the day counter, weather, special events, and earnings -->
+    <div id="gameStatus" style="display: none;">
+        <p id="currentDay">Day: 1</p> <!-- Element to display the current game day -->
+        <p id="weather">Weather: Sunny</p>
+        <p id="specialEvent" style="display: none;">Special Event Today: Extra customers!</p>
+        <p id="dailyEarnings">Daily Earnings: $0</p>
+        <p id="level">Level: 1</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
